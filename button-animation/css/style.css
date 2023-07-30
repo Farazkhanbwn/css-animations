@@ -1,0 +1,174 @@
+/* @keyframes arrow {
+    20%{
+        transform: rotate(180deg);
+    }
+
+    40%{
+        transform: rotate(180deg);
+    }
+
+    100%{
+        transform: rotate(180deg);
+        
+    }
+}
+
+@keyframes arrowopposite {
+    20%{
+        transform: rotate(-180deg);
+    }
+}
+
+@keyframes move {
+    80%{
+        transform: translateX(1rem);
+    }
+
+    100%{
+        transform: translateX(-1rem);
+    }
+} */
+
+@keyframes animateBefore {
+    0%{
+        left: -3rem;
+    }
+
+    50% {
+        left: -3.5rem;
+    }
+
+    100%{
+        left: -3rem;
+    }
+}
+
+@keyframes animateAfter {
+    0%{
+        right: -3rem;
+    }
+
+    50% {
+        right: -3.5rem;
+    }
+
+    100%{
+        right: -3rem;
+    }
+}
+/* Reset Styling */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+/* Main Styling */
+
+a{
+    font-size: 2.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    padding: 1rem 2rem;
+    border: .3rem solid #262626;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    color: #262626;
+    transition: .5s;
+}
+
+a:hover{
+    border-radius: 2rem;
+}
+
+/* Testing */
+
+a::before,
+a::after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 3.4rem;
+    height: 3.4rem;
+    transition: .5s;
+}
+
+a::before{
+    border-bottom: .3rem solid #262626;
+    border-left: .3rem solid #262626;
+    transform: rotate(45deg);
+    top: .7rem;
+    left: -1rem;
+}
+
+a::after{
+    border-top: .3rem solid #262626;
+    border-right: .3rem solid #262626;
+    transform: rotate(45deg);
+    top: .7rem;
+    right: -1rem;
+}
+
+a:hover::after{
+    transform: rotate(-135deg);
+    right : -3rem;
+    animation: animateAfter .5s linear infinite;
+}
+
+a:hover::before{
+    transform: rotate(-135deg);
+    right: -3rem;
+    animation: animateBefore .5s linear infinite;
+    
+}
+
+/* a span::before,
+a span::after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 3.4rem;
+    height: 3.4rem;
+    transition: .5s;
+}
+
+a span::before{
+    border-bottom: .3rem solid #262626;
+    border-left: .3rem solid #262626;
+    transform: rotate(45deg);
+    top: .7rem;
+    left: -1rem;
+}
+
+a:hover span::before{
+    transform: rotate(-135deg);
+    left: -3rem;
+    animation: animateBefore .5s linear infinite;
+}
+
+a span::after{
+    border-top: .3rem solid #262626;
+    border-right: .3rem solid #262626;
+    transform: rotate(45deg);
+    top: .7rem;
+    right: -1rem;
+}
+
+a:hover span::after{
+    transform: rotate(-135deg);
+    right: -3rem;
+    animation: animateAfter .5s linear infinite;
+} */
