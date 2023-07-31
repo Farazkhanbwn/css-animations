@@ -1,0 +1,84 @@
+:root{
+    --border: 5rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+
+}
+
+body{
+    font-family: system-ui;
+    font-weight: 400;
+}
+
+
+/* Main Styling */
+
+section{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    max-width: 100rem;
+    width: 100%;
+}
+
+.main{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(100deg , #000 50%, transparent 50%);
+    background-size: cover;
+    color: #fff;
+}
+
+.main::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content{
+    max-width: calc(100% / 2);
+    padding: 3rem 5rem 3rem 3rem;
+    text-align: justify;
+    float: left;
+}
+
+.heading_primary{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.paragraph{
+    font-size: 1.4rem;
+    line-height: 1.2;
+}
+
+.paragraph:not(:last-child){
+    margin-bottom: 2rem;
+}
+
+.img{
+    width: calc(2 * (100% / 3));
+    height: 40rem;
+    float: right;
+    background-image: url(img/test.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.left{
+    width: calc(100% / 3);
+    float: right;
+}
