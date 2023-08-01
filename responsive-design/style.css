@@ -1,0 +1,185 @@
+:root{
+    --margin-horizonal: 2rem;
+    --bg-color: rgb(218, 218, 218);
+}
+
+/* Reuseab class */
+
+.bg-color{
+    background-color: var(--bg-color);
+    padding: 2.5rem 2rem;
+    border-radius: .3rem;
+}
+
+/* Reset styling */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+
+
+/* Basic Styling */
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    background-color: var(--bg-color);
+}
+
+/* Grid Styling */
+
+.main{
+    max-width: 114rem;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+}
+
+/* Logo Image */
+.logo_img{
+    width: 10rem;
+    height: 10rem;
+    background-image: url("https://media.istockphoto.com/id/1313644269/vector/gold-and-silver-circle-star-logo-template.jpg?s=612x612&w=0&k=20&c=hDqCI9qTkNqNcKa6XS7aBim7xKz8cZbnm80Z_xiU2DI=");
+    background-size: cover;
+    margin-bottom: 1.5rem;
+}
+
+.col-3-of-12{
+    width: calc(3 * ((100% - var(--margin-horizonal)) / 12));
+    float: left;
+}
+
+.col-9-of-12{
+    width: calc(9 * ((100% - var(--margin-horizonal)) / 12));
+    float: left;
+    margin-right: var(--margin-horizonal);
+}
+
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Nav Bar styling */
+
+.navigation{
+    background: #000;
+    margin-bottom: 1.5rem;
+    border-radius: .4rem;
+    overflow: hidden;
+}
+
+.navigation_link{
+    font-size: 1.4rem;
+    padding: 1.2rem;
+    text-transform: capitalize;
+    color: #fff;
+    transition: .3s all;
+}
+
+.navigation_link:hover,
+.navigation_link.active{
+    background-color: rgb(241, 48, 48);
+}
+
+/* Main Body */
+
+.heading_section{
+    margin-bottom: 2rem;
+}
+
+.heading_primary{
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.img{
+    width: 40rem;
+    height: 40rem;
+    background-image: url("https://images.pexels.com/photos/17636977/pexels-photo-17636977/free-photo-of-skyscrapers-in-new-york.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    /* background-size: cover; */
+    /* filter: blur(.5rem); */
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.paragraph{
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* Description Section */
+.description{
+    margin-bottom: 2rem;
+}
+
+/* side Bar */
+.text{
+    font-size: 1.4rem;
+    display: block;
+    padding: 1rem;
+    border-bottom: .1rem solid rgba(0, 0, 0, .15);
+    transition: .3s all;
+    border-radius: .3rem;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.text:hover{
+    background-color: rgb(241, 48, 48);
+    color: #fff;
+}
+
+.content{
+    margin-bottom: 1.2rem;
+}
+
+.content_img{
+    /* width: 40rem; */
+    height: 20rem;
+    background-image: url("https://images.pexels.com/photos/459799/pexels-photo-459799.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    width: 100%;
+}
+
+/* bottom copy right text */
+.copyrigh{
+    font-size: 1.8rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+@media (max-width: 800px){
+    html{
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 660px){
+    .col-9-of-12,
+    .col-3-of-12{
+        width: 100%;
+        float: none;
+    }
+
+    .navigation_link{
+        text-align: center;
+        display: block;
+        font-size: 1.8rem;
+    }
+}
