@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: sans-serif;
+    font-weight: 400;
+    background-color: #0c1856;
+}
+
+/* Main styling */
+.skillsBox{
+    position: relative;
+    width: 60rem;
+    padding: 5rem;
+    margin-inline: auto;
+}
+
+.skillsBox h1{
+    margin: 0 0 2rem;
+    padding: 0;
+    color: #fff;
+    font-size: 3rem;
+}
+
+.skills{
+    margin-bottom: 2rem;
+}
+
+.skills h2{
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.progress{
+    width: 100%;
+    border-radius: 1rem;
+    border: .2rem solid #fff;
+    text-align: center;
+    overflow: hidden;
+    font-size: 1.6rem;
+    
+}
+
+.progress .percent{
+    text-align: right;
+    color: #fff;
+    padding-right: 1rem;
+    border-right: .2rem solid #fff;
+    background: linear-gradient(45deg, rgba(255, 255, 255, .25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .25) 50%, rgba(255, 255, 255, .25) 75% ,transparent 75% , transparent);
+    background-size: 3rem 3rem;
+    animation: forward .5s linear infinite;
+    /* background-repeat: no-repeat; */
+}
+
+@keyframes forward {
+    0%{
+        background-position: 0 0;
+    }
+
+    100%{
+        background-position: 3rem 0;
+        /* background-position: left 3rem; */
+    }
+}
