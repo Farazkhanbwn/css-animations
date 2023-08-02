@@ -1,6 +1,6 @@
 :root{
     --border-main: #d6d6d6;
-    --border-active: #757575;
+    --border-active: #8d8d8d;
 }
 
 *{
@@ -31,15 +31,6 @@ body{
     transition: .2s all;
 }
 
-.check_box{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 5;
-    opacity: 0;
-}
 
 .loader::before,
 .loader::after{
@@ -50,6 +41,7 @@ body{
     border-bottom: .2rem solid #e74c3c;
     border-radius: 50%;
     animation: animate 3s linear infinite;
+    transition: .3s;
 }
 
 .loader::after{
@@ -58,12 +50,28 @@ body{
     animation-duration: 2s;
 }
 
+/* CheckBox Checked */
+ 
+/* .check_box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    opacity: 0;
+} 
+
 .loader:has(.check_box:checked){
     border-top: .2rem solid var(--border-active);
-}
+} */
 
-.loader::before:has(.check_box:checked){
-    border-top: .2rem solid rgb(143, 68, 68);
+/* Hover on divs */
+
+.loader:hover,
+.loader:hover::after,
+.loader:hover::before{
+    border-top: .2rem solid var(--border-active);
 }
 
 @keyframes animate {
