@@ -1,0 +1,88 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: url("https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+}
+
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    max-width: 40rem;
+    width: 100%;
+    padding: 4rem;
+    background: rgba(0, 0, 0, .8);
+    box-sizing: border-box;
+    box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, .8);
+    border-radius: 1rem;
+}
+
+.box h2{
+    margin-bottom: 3rem;
+    text-align: center;
+    padding: 0;
+    color: #fff;
+}
+
+.box .inputBox{
+    position: relative;
+}
+
+.box .inputBox input{
+    width: 100%;
+    padding: .8rem 0;
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 3rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: .1rem solid gray;
+}
+
+::-webkit-input-placeholder{
+    font-size: 1rem;
+    color: rgb(51, 155, 158);
+}
+
+.box .inputBox label{
+    position: absolute;
+    top: -.5rem;
+    left: 0;
+    padding: 0;
+    color: rgb(51, 155, 158);
+    pointer-events: none;
+    font-size: 1rem;
+    transition: all .3s;
+    /* animation: animate 3s linear; */
+    /* color: #fff; */
+}
+
+input:placeholder-shown + label{
+    opacity: 0;
+    top: 0;
+}
+
+input[type="submit"]{
+    padding: .7rem 0;
+    background-color: rgb(51, 155, 158);
+    color: #fff;
+    width: 100%;
+    border: none;
+    font-size: 1.2rem;
+    outline: none;
+    border-radius: .3rem;
+    cursor: pointer;
+}
+
+.box .inputBox input:focus{
+    border-bottom: .3rem solid rgb(35, 157, 161);
+}
+
+.box .inputBox input:focus:invalid{
+    border-bottom: .3rem solid rgb(255, 42, 42);
+}
+
