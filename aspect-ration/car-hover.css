@@ -38,12 +38,21 @@ body{
     /* background: red; */
     perspective: 150rem;
     position: relative;
+    border-radius: .3rem;
+    overflow: hidden;
+    /* border: 1rem solid black; */
+}
+
+.card_front,
+.card_back {
+    border-radius: .3rem;
 }
 
 .card_front{
     position: relative;
     transition: all .8s;
     backface-visibility: hidden;
+    outline: 1px solid;
 }
 
 .card_img{
@@ -97,6 +106,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    outline: 1px solid;
 }
 
 .card:hover .card_back{ 
@@ -114,6 +124,7 @@ body{
     font-size: 1.2rem;
     color: #fff;
     text-align: center;
+    
 }
 
 .btn_primary{

@@ -13,31 +13,17 @@ body{
     font-weight: 400;
 }
 
-.main{
+
+.chess_table {
+    width: 100vw;
     height: 100vh;
-    /* width: 30rem; */
-    display: flex;
-    flex-direction: row;
-    background: brown;
-    padding: 1rem;
-    flex-wrap: wrap;
-    align-content: space-between;
-    /* justify-content: center;
-    align-items: center; */
-    /* flex-flow: column wrap; */
+    background-image: linear-gradient(90deg , rgb(124,0,123) 10vw , rgb(0 , 0 , 0) 10vw ,rgb(0 , 0 , 0) 20vw);
+    background-size: 20vw 20vh;
+    background-repeat: round;
+    height: 20vh;
 }
 
-p{
-    font-size: 1.6rem;
-    padding: 1.2rem;
-    background-color: rgb(55, 131, 182);
-    color: #fff;
-    margin: .5rem;
-    text-transform: capitalize;
-    font-weight: 500;
-    flex-grow: 1;
+.chess_table:nth-child(even) {
+    background-image: linear-gradient(90deg , rgb(0,0,0) 10vw , rgb(124 , 123 , 0) 10vw ,rgb(124 , 123 , 0) 20vw);
 }
 
-p:nth-child(even){
-    background-color: green;
-}
