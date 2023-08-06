@@ -1,0 +1,139 @@
+:root{
+    --margin-horizontal: 2rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: system-ui;
+    font-weight: 400;
+}
+
+/*  */
+
+.row{
+    max-width: 90rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.col-1-of-3{
+    width: calc((100% - 2 * (var(--margin-horizontal))) / 3);
+}
+
+/* Front Side */
+
+.card{
+    /* background: red; */
+    perspective: 150rem;
+    position: relative;
+    border-radius: .3rem;
+    overflow: hidden;
+    /* border: 1rem solid black; */
+}
+
+.card_front,
+.card_back {
+    border-radius: .3rem;
+}
+
+.card_front{
+    position: relative;
+    transition: all .8s;
+    backface-visibility: hidden;
+    outline: 1px solid;
+}
+
+.card_img{
+    max-width: 100%;
+    aspect-ratio: 5 / 6;
+    background-size: cover;
+}
+
+.img1{
+    background-image: linear-gradient(rgba(13, 52, 124 ,.2) , rgba(13, 52, 124, .2)) , url("https://images.pexels.com/photos/3747461/pexels-photo-3747461.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+
+.img2{
+    background-image: linear-gradient(rgba(13, 52, 124 ,.2) , rgba(13, 52, 124, .2)) , url("https://images.pexels.com/photos/16498785/pexels-photo-16498785/free-photo-of-light-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+
+.img3{
+    background-image: linear-gradient(rgba(13, 52, 124 ,.2) , rgba(13, 52, 124, .2)) , url("https://images.pexels.com/photos/12825195/pexels-photo-12825195.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+
+.card_caption{
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: 500;
+    text-transform: capitalize;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    text-align: center;
+}
+
+.card:hover .card_front{
+    transform: rotateX(180deg);
+}
+
+/* Card Back */
+
+.card_back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateX(180deg);
+    background-image: linear-gradient(rgba(13, 52, 124 , .9) , rgba(13, 52, 124, .9)) ;
+    transition: all .8s;
+    padding: 4rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    outline: 1px solid;
+}
+
+.card:hover .card_back{ 
+    transform: rotateX(360deg);
+}
+
+.heading_primary{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+}
+
+.paragraph_primary{
+    font-size: 1.2rem;
+    color: #fff;
+    text-align: center;
+    
+}
+
+.btn_primary{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(207, 50, 50);
+    padding: 1rem;
+    border-radius: 4rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
